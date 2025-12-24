@@ -1,77 +1,128 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 
-<meta charset="utf-8">
-<meta name="generator" content="quarto-1.8.24">
+<head>
+  <meta charset="utf-8">
+  <meta name="generator" content="quarto-1.8.24">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+  <title>9&nbsp; UAS-4 My Knowledge</title>
+  
+  <style>
+    /* Base Styles */
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1em;
+      vertical-align: middle;
+    }
 
+    /* Custom UI Enhancements */
+    .knowledge-header {
+        background: linear-gradient(120deg, #2c3e50, #4ca1af);
+        color: white;
+        padding: 40px 30px;
+        border-radius: 15px;
+        margin-bottom: 30px;
+        box-shadow: 0 10px 20px rgba(44, 62, 80, 0.3);
+    }
+    
+    .topic-card {
+        border: none;
+        border-radius: 12px;
+        background: #fff;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+        transition: all 0.3s ease;
+        height: 100%;
+        overflow: hidden;
+    }
+    
+    .topic-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+    }
 
-<title>9&nbsp; UAS-4 My Knowledge – Armein Z. R. Langi</title>
-<style>
-code{white-space: pre-wrap;}
-span.smallcaps{font-variant: small-caps;}
-div.columns{display: flex; gap: min(4vw, 1.5em);}
-div.column{flex: auto; overflow-x: auto;}
-div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
-ul.task-list{list-style: none;}
-ul.task-list li input[type="checkbox"] {
-  width: 0.8em;
-  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
-  vertical-align: middle;
-}
-</style>
+    .icon-box {
+        width: 50px;
+        height: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 12px;
+        font-size: 1.5rem;
+        margin-right: 15px;
+    }
 
+    .method-card {
+        background-color: #f8f9fa;
+        border-left: 5px solid #0d6efd;
+        padding: 20px;
+        border-radius: 8px;
+        margin-bottom: 20px;
+    }
 
-<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="../site_libs/quarto-nav/headroom.min.js"></script>
-<script src="../site_libs/clipboard/clipboard.min.js"></script>
-<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="../site_libs/quarto-search/fuse.min.js"></script>
-<script src="../site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="../">
-<link href="../My_Professional_Reviews/index.html" rel="next">
-<link href="../My_Innovations/index.html" rel="prev">
-<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
-<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
-<script src="../site_libs/quarto-html/popper.min.js"></script>
-<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="../site_libs/quarto-html/anchor.min.js"></script>
-<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dc55a5b9e770e841cd82e46aadbfb9b0.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-70a47bd5681a7291082a5b9f83d58762.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
-<script id="quarto-search-options" type="application/json">{
-  "location": "sidebar",
-  "copy-button": false,
-  "collapse-after": 3,
-  "panel-placement": "start",
-  "type": "textbox",
-  "limit": 50,
-  "keyboard-shortcut": [
-    "f",
-    "/",
-    "s"
-  ],
-  "show-item-context": false,
-  "language": {
-    "search-no-results-text": "No results",
-    "search-matching-documents-text": "matching documents",
-    "search-copy-link-title": "Copy link to search",
-    "search-hide-matches-text": "Hide additional matches",
-    "search-more-match-text": "more match in this document",
-    "search-more-matches-text": "more matches in this document",
-    "search-clear-button-title": "Clear",
-    "search-text-placeholder": "",
-    "search-detached-cancel-button-title": "Cancel",
-    "search-submit-button-title": "Submit",
-    "search-label": "Search"
-  }
-}</script>
+    .chart-wrapper {
+        position: relative;
+        height: 300px;
+        width: 100%;
+    }
+  </style>
 
+  <script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+  <script src="../site_libs/quarto-nav/headroom.min.js"></script>
+  <script src="../site_libs/clipboard/clipboard.min.js"></script>
+  <script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+  <script src="../site_libs/quarto-search/fuse.min.js"></script>
+  <script src="../site_libs/quarto-search/quarto-search.js"></script>
+  <meta name="quarto:offset" content="../">
+  <link href="../My_Professional_Reviews/index.html" rel="next">
+  <link href="../My_Innovations/index.html" rel="prev">
+  <script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+  <script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+  <script src="../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
+  <script src="../site_libs/quarto-html/popper.min.js"></script>
+  <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+  <script src="../site_libs/quarto-html/anchor.min.js"></script>
+  <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+  <link href="../site_libs/quarto-html/quarto-syntax-highlighting-dc55a5b9e770e841cd82e46aadbfb9b0.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+  <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+  <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+  <link href="../site_libs/bootstrap/bootstrap-70a47bd5681a7291082a5b9f83d58762.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+  
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
+  <script id="quarto-search-options" type="application/json">{
+    "location": "sidebar",
+    "copy-button": false,
+    "collapse-after": 3,
+    "panel-placement": "start",
+    "type": "textbox",
+    "limit": 50,
+    "keyboard-shortcut": [
+      "f",
+      "/",
+      "s"
+    ],
+    "show-item-context": false,
+    "language": {
+      "search-no-results-text": "No results",
+      "search-matching-documents-text": "matching documents",
+      "search-copy-link-title": "Copy link to search",
+      "search-hide-matches-text": "Hide additional matches",
+      "search-more-match-text": "more match in this document",
+      "search-more-matches-text": "more matches in this document",
+      "search-clear-button-title": "Clear",
+      "search-text-placeholder": "",
+      "search-detached-cancel-button-title": "Cancel",
+      "search-submit-button-title": "Submit",
+      "search-label": "Search"
+    }
+  }</script>
 </head>
 
 <body class="nav-sidebar floating quarto-light">
@@ -92,15 +143,14 @@ ul.task-list li input[type="checkbox"] {
     </div>
   </nav>
 </header>
-<!-- content -->
+
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
-<!-- sidebar -->
-  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+<nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
     <div class="pt-lg-2 mt-2 text-left sidebar-header sidebar-header-stacked">
       <a href="../index.html" class="sidebar-logo-link">
       </a>
     <div class="sidebar-title mb-0 py-0">
-      <a href="../">Armein Z. R. Langi</a> 
+      <a href="../">Portofolio Saya</a> 
     </div>
       </div>
         <div class="mt-2 flex-shrink-0 align-items-center">
@@ -192,37 +242,214 @@ ul.task-list li input[type="checkbox"] {
     </div>
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
-<!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
+<div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
         
     </div>
-<!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
 <h1 class="title"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">UAS-4 My Knowledge</span></h1>
+<p class="subtitle lead">Kompendium Pengetahuan Kesehatan Global</p>
 </div>
-
-
-
-<div class="quarto-title-meta">
-
-    
-  
-    
-  </div>
-  
-
-
+<div class="quarto-title-meta"></div>
 </header>
 
+<div class="container-fluid p-0">
 
-<p>Cara saya mengkomunikasikan sebuah pengatahuan sebagai petunjuk bagi orang lain 1) saya tulis <a href="Rekomendasi Presentasi Efektif(Contoh Makalah).pdf">makalah sebagai bahan utama</a> 2) lalu saya buat <a href="Contoh Transkrip Presentasi.pdf">transkrip ucapan lisan</a> 3) kemudian saya kembangkan <a href="Rekomendasi Presentasi (Contoh Slides).pdf">slide pendukung trnsskrip</a> 4) lalu saya memproduksivideo audio visual </p><div class="quarto-video ratio ratio-16x9"><iframe data-external="1" src="https://www.youtube.com/embed/ZbghfMvnPZc" title="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe></div> <div class="quarto-video ratio ratio-16x9"><iframe data-external="1" src="https://www.youtube.com/embed/ZbghfMvnPZc" title="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe></div><p></p>
+    <div class="row">
+        <div class="col-12">
+            <div class="knowledge-header">
+                <h2 class="fw-bold mb-2"><i class="bi bi-journal-medical me-2"></i>Esensi Pengetahuan</h2>
+                <p class="lead mb-0">
+                    Pengetahuan saya mengenai kesehatan global bukan sekadar data statistik, melainkan pemahaman sistemik tentang bagaimana penyakit, ekonomi, dan ketimpangan sosial saling berkaitan mempengaruhi miliaran nyawa.
+                </p>
+            </div>
+        </div>
+    </div>
 
+    <div class="row mb-5">
+        <div class="col-12 mb-3">
+            <h4 class="text-secondary fw-bold border-bottom pb-2">I. Tiga Dimensi Masalah</h4>
+        </div>
 
+        <div class="col-md-4 mb-4">
+            <div class="topic-card p-4">
+                <div class="d-flex align-items-center mb-3">
+                    <div class="icon-box bg-danger bg-opacity-10 text-danger">
+                        <i class="bi bi-virus"></i>
+                    </div>
+                    <h5 class="fw-bold mb-0">1. Beban Penyakit</h5>
+                </div>
+                <p class="small text-muted">Dua kategori utama yang menghantam populasi:</p>
+                <div class="accordion" id="accordionDisease">
+                    <div class="accordion-item border-0">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed shadow-none bg-light" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne">
+                                Penyakit Menular
+                            </button>
+                        </h2>
+                        <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionDisease">
+                            <div class="accordion-body small">
+                                Termasuk pandemi COVID-19, HIV/AIDS (38 juta penderita), Malaria, dan TBC. Masalah utama adalah penyebaran cepat dan akses obat yang tidak merata.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item border-0 mt-2">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed shadow-none bg-light" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo">
+                                Penyakit Tidak Menular
+                            </button>
+                        </h2>
+                        <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionDisease">
+                            <div class="accordion-body small">
+                                Penyakit jantung, diabetes, dan kanker. Seringkali membutuhkan perawatan jangka panjang yang mahal.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
 
-</main> <!-- /main -->
+        <div class="col-md-4 mb-4">
+            <div class="topic-card p-4">
+                <div class="d-flex align-items-center mb-3">
+                    <div class="icon-box bg-warning bg-opacity-10 text-dark">
+                        <i class="bi bi-building-exclamation"></i>
+                    </div>
+                    <h5 class="fw-bold mb-0">2. Isu Struktural</h5>
+                </div>
+                <ul class="list-unstyled small">
+                    <li class="mb-2"><i class="bi bi-x-circle text-danger me-2"></i><strong>Akses Terbatas:</strong> Fasilitas kesehatan & tenaga medis yang minim di negara berkembang.</li>
+                    <li class="mb-2"><i class="bi bi-x-circle text-danger me-2"></i><strong>Biaya Bencana:</strong> <em>Catastrophic health expenditure</em> membuat keluarga jatuh miskin.</li>
+                    <li class="mb-2"><i class="bi bi-x-circle text-danger me-2"></i><strong>Kesehatan Mental:</strong> Isu global yang sering terabaikan namun berdampak besar pada produktivitas.</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="col-md-4 mb-4">
+            <div class="topic-card p-4">
+                <div class="d-flex align-items-center mb-3">
+                    <div class="icon-box bg-info bg-opacity-10 text-primary">
+                        <i class="bi bi-globe-americas"></i>
+                    </div>
+                    <h5 class="fw-bold mb-0">3. Faktor Eksternal</h5>
+                </div>
+                <p class="small text-muted">Tantangan kesehatan diperparah oleh:</p>
+                <ul class="list-group list-group-flush small">
+                    <li class="list-group-item border-0 ps-0"><i class="bi bi-cloud-haze2 me-2"></i><strong>Perubahan Iklim:</strong> Mengubah pola cuaca, memperluas jangkauan vektor penyakit.</li>
+                    <li class="list-group-item border-0 ps-0"><i class="bi bi-bricks me-2"></i><strong>Konflik:</strong> Meruntuhkan infrastruktur kesehatan yang sudah ada.</li>
+                    <li class="list-group-item border-0 ps-0"><i class="bi bi-graph-down-arrow me-2"></i><strong>Ketimpangan Ekonomi:</strong> Kesenjangan akses antara kaya dan miskin.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="row mb-5 align-items-center">
+        <div class="col-lg-5">
+            <div class="card shadow-sm border-0 h-100">
+                <div class="card-body">
+                    <h5 class="card-title text-center text-primary fw-bold mb-3">Kesenjangan Cakupan Global</h5>
+                    <div class="chart-wrapper">
+                        <canvas id="knowledgeChart"></canvas>
+                    </div>
+                    <div class="text-center mt-3">
+                        <span class="badge bg-primary">50% Terlayani</span>
+                        <span class="badge bg-secondary">50% Tidak Terlayani</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-7 ps-lg-5">
+            <h3 class="fw-bold">Realitas Data: "Satu dari Dua"</h3>
+            <p class="lead text-muted">
+                Statistik dari WHO dan Bank Dunia (2021) menunjukkan fakta yang mengejutkan:
+            </p>
+            <div class="row">
+                <div class="col-6 mb-3">
+                    <h2 class="fw-bold text-danger">4,5 Miliar</h2>
+                    <p class="small">Orang tidak mendapatkan layanan kesehatan esensial penuh (imunisasi, obat dasar, layanan ibu).</p>
+                </div>
+                <div class="col-6 mb-3">
+                    <h2 class="fw-bold text-warning">2 Miliar</h2>
+                    <p class="small">Orang terbebani secara finansial akibat biaya pengobatan dari kantong sendiri.</p>
+                </div>
+            </div>
+            <div class="alert alert-light border-start border-primary border-3" role="alert">
+                <i class="bi bi-info-circle-fill me-2"></i>
+                Data ini mencerminkan stagnansi progres target <strong>SDG 3.8 (Universal Health Coverage)</strong> sejak tahun 2015.
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-12 mb-3">
+            <h4 class="text-secondary fw-bold border-bottom pb-2">II. Strategi Komunikasi Pengetahuan</h4>
+            <p class="text-muted">Bagaimana saya menjelaskan kompleksitas ini kepada orang awam?</p>
+        </div>
+        
+        <div class="col-md-4">
+            <div class="method-card">
+                <h5 class="fw-bold"><i class="bi bi-chat-quote-fill me-2"></i>1. Sederhanakan (Analogi)</h5>
+                <p class="small mb-0">Saya mengumpamakan sistem kesehatan seperti "Jaring Pengaman". Jika jaring itu bolong (kurang fasilitas/biaya mahal), orang akan jatuh ke jurang kemiskinan saat sakit.</p>
+            </div>
+        </div>
+        
+        <div class="col-md-4">
+            <div class="method-card" style="border-left-color: #dc3545;">
+                <h5 class="fw-bold"><i class="bi bi-eye-fill me-2"></i>2. Visualisasikan Dampak</h5>
+                <p class="small mb-0">Alih-alih hanya menyebut "miliaran", saya katakan: "Bayangkan separuh dari semua orang yang Anda kenal tidak bisa ke dokter saat sakit parah."</p>
+            </div>
+        </div>
+        
+        <div class="col-md-4">
+            <div class="method-card" style="border-left-color: #198754;">
+                <h5 class="fw-bold"><i class="bi bi-heart-pulse-fill me-2"></i>3. Konteks Personal</h5>
+                <p class="small mb-0">Menghubungkan isu global dengan keseharian: harga obat yang mahal, antrian BPJS, atau dampak pandemi yang baru saja kita lalui bersama.</p>
+            </div>
+        </div>
+    </div>
+
+</div>
+</main> <script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const ctx = document.getElementById('knowledgeChart').getContext('2d');
+        
+        new Chart(ctx, {
+            type: 'doughnut',
+            data: {
+                labels: ['Terlayani Penuh', 'Belum Terlayani'],
+                datasets: [{
+                    data: [50, 50],
+                    backgroundColor: [
+                        '#0d6efd', // Blue
+                        '#6c757d'  // Grey
+                    ],
+                    borderWidth: 0,
+                    hoverOffset: 10
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: {
+                        position: 'bottom'
+                    },
+                    tooltip: {
+                        callbacks: {
+                            label: function(context) {
+                                return context.label + ': ' + context.parsed + '% Populasi Dunia';
+                            }
+                        }
+                    }
+                },
+                cutout: '70%',
+            }
+        });
+    });
+</script>
+
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     const icon = "";
@@ -623,21 +850,5 @@ ul.task-list li input[type="checkbox"] {
     }
   });
   </script>
-<nav class="page-navigation">
-  <div class="nav-page nav-page-previous">
-      <a href="../My_Innovations/index.html" class="pagination-link" aria-label="UAS-3 My Innovations">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">UAS-3 My Innovations</span></span>
-      </a>          
-  </div>
-  <div class="nav-page nav-page-next">
-      <a href="../My_Professional_Reviews/index.html" class="pagination-link" aria-label="UAS-5 My Professional Reviews">
-        <span class="nav-page-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">UAS-5 My Professional Reviews</span></span> <i class="bi bi-arrow-right-short"></i>
-      </a>
-  </div>
-</nav>
-</div> <!-- /content -->
-
-
-
-
-</body></html>
+</div> </body>
+</html>

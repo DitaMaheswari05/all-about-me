@@ -1,77 +1,139 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 
-<meta charset="utf-8">
-<meta name="generator" content="quarto-1.8.24">
+<head>
+  <meta charset="utf-8">
+  <meta name="generator" content="quarto-1.8.24">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+  <title>8&nbsp; UAS-3 My Innovations</title>
+  
+  <style>
+    /* Base Styles */
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1em;
+      vertical-align: middle;
+    }
 
+    /* Custom UI Enhancements */
+    .hero-section {
+        background: linear-gradient(135deg, #0d6efd 0%, #0043a8 100%);
+        color: white;
+        padding: 40px 30px;
+        border-radius: 15px;
+        margin-bottom: 30px;
+        box-shadow: 0 10px 20px rgba(13, 110, 253, 0.2);
+    }
+    
+    .innovation-card {
+        border: none;
+        border-radius: 12px;
+        background: #fff;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+        transition: all 0.3s ease;
+        height: 100%;
+        overflow: hidden;
+    }
+    
+    .innovation-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+    }
 
-<title>8&nbsp; UAS-3 My Innovations – Armein Z. R. Langi</title>
-<style>
-code{white-space: pre-wrap;}
-span.smallcaps{font-variant: small-caps;}
-div.columns{display: flex; gap: min(4vw, 1.5em);}
-div.column{flex: auto; overflow-x: auto;}
-div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
-ul.task-list{list-style: none;}
-ul.task-list li input[type="checkbox"] {
-  width: 0.8em;
-  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
-  vertical-align: middle;
-}
-</style>
+    .icon-box {
+        width: 60px;
+        height: 60px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        margin-bottom: 20px;
+        font-size: 1.5rem;
+    }
 
+    .chart-container {
+        position: relative;
+        height: 350px;
+        width: 100%;
+    }
 
-<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="../site_libs/quarto-nav/headroom.min.js"></script>
-<script src="../site_libs/clipboard/clipboard.min.js"></script>
-<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="../site_libs/quarto-search/fuse.min.js"></script>
-<script src="../site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="../">
-<link href="../My_Knowledge/index.html" rel="next">
-<link href="../My_Opinions/index.html" rel="prev">
-<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
-<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
-<script src="../site_libs/quarto-html/popper.min.js"></script>
-<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="../site_libs/quarto-html/anchor.min.js"></script>
-<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dc55a5b9e770e841cd82e46aadbfb9b0.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-70a47bd5681a7291082a5b9f83d58762.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
-<script id="quarto-search-options" type="application/json">{
-  "location": "sidebar",
-  "copy-button": false,
-  "collapse-after": 3,
-  "panel-placement": "start",
-  "type": "textbox",
-  "limit": 50,
-  "keyboard-shortcut": [
-    "f",
-    "/",
-    "s"
-  ],
-  "show-item-context": false,
-  "language": {
-    "search-no-results-text": "No results",
-    "search-matching-documents-text": "matching documents",
-    "search-copy-link-title": "Copy link to search",
-    "search-hide-matches-text": "Hide additional matches",
-    "search-more-match-text": "more match in this document",
-    "search-more-matches-text": "more matches in this document",
-    "search-clear-button-title": "Clear",
-    "search-text-placeholder": "",
-    "search-detached-cancel-button-title": "Cancel",
-    "search-submit-button-title": "Submit",
-    "search-label": "Search"
-  }
-}</script>
+    .nav-pills .nav-link.active {
+        background-color: #0d6efd;
+    }
+    
+    .solution-list li {
+        margin-bottom: 10px;
+        position: relative;
+        padding-left: 25px;
+    }
+    
+    .solution-list li::before {
+        content: "\F26A"; /* Bootstrap check icon */
+        font-family: "bootstrap-icons";
+        position: absolute;
+        left: 0;
+        color: #198754;
+        font-weight: bold;
+    }
+  </style>
 
+  <script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+  <script src="../site_libs/quarto-nav/headroom.min.js"></script>
+  <script src="../site_libs/clipboard/clipboard.min.js"></script>
+  <script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+  <script src="../site_libs/quarto-search/fuse.min.js"></script>
+  <script src="../site_libs/quarto-search/quarto-search.js"></script>
+  <meta name="quarto:offset" content="../">
+  <link href="../My_Knowledge/index.html" rel="next">
+  <link href="../My_Opinions/index.html" rel="prev">
+  <script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+  <script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+  <script src="../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
+  <script src="../site_libs/quarto-html/popper.min.js"></script>
+  <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+  <script src="../site_libs/quarto-html/anchor.min.js"></script>
+  <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+  <link href="../site_libs/quarto-html/quarto-syntax-highlighting-dc55a5b9e770e841cd82e46aadbfb9b0.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+  <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+  <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+  <link href="../site_libs/bootstrap/bootstrap-70a47bd5681a7291082a5b9f83d58762.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+  
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
+  <script id="quarto-search-options" type="application/json">{
+    "location": "sidebar",
+    "copy-button": false,
+    "collapse-after": 3,
+    "panel-placement": "start",
+    "type": "textbox",
+    "limit": 50,
+    "keyboard-shortcut": [
+      "f",
+      "/",
+      "s"
+    ],
+    "show-item-context": false,
+    "language": {
+      "search-no-results-text": "No results",
+      "search-matching-documents-text": "matching documents",
+      "search-copy-link-title": "Copy link to search",
+      "search-hide-matches-text": "Hide additional matches",
+      "search-more-match-text": "more match in this document",
+      "search-more-matches-text": "more matches in this document",
+      "search-clear-button-title": "Clear",
+      "search-text-placeholder": "",
+      "search-detached-cancel-button-title": "Cancel",
+      "search-submit-button-title": "Submit",
+      "search-label": "Search"
+    }
+  }</script>
 </head>
 
 <body class="nav-sidebar floating quarto-light">
@@ -92,15 +154,14 @@ ul.task-list li input[type="checkbox"] {
     </div>
   </nav>
 </header>
-<!-- content -->
+
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
-<!-- sidebar -->
-  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+<nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
     <div class="pt-lg-2 mt-2 text-left sidebar-header sidebar-header-stacked">
       <a href="../index.html" class="sidebar-logo-link">
       </a>
     <div class="sidebar-title mb-0 py-0">
-      <a href="../">Armein Z. R. Langi</a> 
+      <a href="../">Portofolio Saya</a> 
     </div>
       </div>
         <div class="mt-2 flex-shrink-0 align-items-center">
@@ -192,37 +253,166 @@ ul.task-list li input[type="checkbox"] {
     </div>
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
-<!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
+<div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
         
     </div>
-<!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
 <h1 class="title"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">UAS-3 My Innovations</span></h1>
+<p class="subtitle text-muted lead">Transformasi Layanan Kesehatan Global: Dari Masalah Menuju Solusi Berkelanjutan</p>
 </div>
-
-
-
-<div class="quarto-title-meta">
-
-    
-  
-    
-  </div>
-  
-
-
+<div class="quarto-title-meta"></div>
 </header>
 
+<div class="container-fluid p-0">
 
+    <div class="row">
+        <div class="col-12">
+            <div class="hero-section">
+                <h2 class="fw-bold"><i class="bi bi-lightbulb-fill me-2"></i>Visi Inovasi Kesehatan</h2>
+                <p class="lead mb-0">
+                    Menghadapi fakta bahwa <strong>4,5 miliar orang</strong> belum terlayani kesehatan dasar dan <strong>2 miliar orang</strong> terancam kemiskinan akibat biaya medis, pendekatan konvensional tidak lagi cukup. Kita memerlukan akselerasi melalui inovasi yang mengintegrasikan teknologi, pembiayaan inklusif, dan pemberdayaan komunitas.
+                </p>
+            </div>
+        </div>
+    </div>
 
+    <div class="row mb-5">
+        <div class="col-12 mb-3">
+            <h3 class="text-primary fw-bold border-bottom pb-2">4 Pilar Solusi Inovatif</h3>
+        </div>
 
+        <div class="col-md-6 mb-4">
+            <div class="innovation-card p-4">
+                <div class="icon-box bg-primary text-white shadow-sm">
+                    <i class="bi bi-phone-vibrate"></i>
+                </div>
+                <h4 class="card-title fw-bold">1. Digitalisasi & Telemedisin Inklusif</h4>
+                <p class="text-muted">Mengatasi hambatan geografis dan kekurangan tenaga medis.</p>
+                <ul class="solution-list list-unstyled">
+                    <li><strong>Konsultasi Jarak Jauh:</strong> Menggunakan aplikasi *low-bandwidth* untuk menghubungkan pasien di daerah terpencil dengan spesialis di kota besar.</li>
+                    <li><strong>Diagnostik Berbasis AI:</strong> Pemanfaatan *Artificial Intelligence* untuk mendeteksi penyakit (seperti TBC melalui rontgen atau kanker kulit) secara dini tanpa memerlukan peralatan lab mahal.</li>
+                    <li><strong>Rekam Medis Terintegrasi:</strong> Sistem data terpusat yang memastikan riwayat pasien dapat diakses di fasilitas manapun, mengurangi kesalahan medis.</li>
+                </ul>
+            </div>
+        </div>
 
-</main> <!-- /main -->
-<script id="quarto-html-after-body" type="application/javascript">
+        <div class="col-md-6 mb-4">
+            <div class="innovation-card p-4">
+                <div class="icon-box bg-success text-white shadow-sm">
+                    <i class="bi bi-wallet2"></i>
+                </div>
+                <h4 class="card-title fw-bold">2. Proteksi Finansial Mikro</h4>
+                <p class="text-muted">Mencegah kemiskinan akibat biaya kesehatan (*Catastrophic Health Expenditure*).</p>
+                <ul class="solution-list list-unstyled">
+                    <li><strong>Asuransi Kesehatan Mikro:</strong> Skema asuransi dengan premi sangat rendah (misal: setara harga sebotol air) yang mencakup layanan dasar dan gawat darurat.</li>
+                    <li><strong>Subsidi Silang Digital:</strong> Platform crowdfunding atau zakat kesehatan yang transparan untuk membantu keluarga tidak mampu membayar biaya operasi.</li>
+                    <li><strong>Pembayaran Non-Tunai:</strong> Integrasi dengan *mobile money* untuk memudahkan pembayaran cicilan kesehatan bagi pekerja sektor informal.</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="col-md-6 mb-4">
+            <div class="innovation-card p-4">
+                <div class="icon-box bg-warning text-dark shadow-sm">
+                    <i class="bi bi-box-seam"></i>
+                </div>
+                <h4 class="card-title fw-bold">3. Logistik 'Last-Mile' Cerdas</h4>
+                <p class="text-muted">Memastikan vaksin dan obat sampai ke tangan yang membutuhkan.</p>
+                <ul class="solution-list list-unstyled">
+                    <li><strong>Pengiriman via Drone:</strong> Mengirimkan darah, vaksin, dan obat esensial ke daerah kepulauan atau pegunungan yang sulit diakses kendaraan darat.</li>
+                    <li><strong>Rantai Dingin Portabel (*Portable Cold Chain*):</strong> Kotak pendingin bertenaga surya untuk menjaga kualitas vaksin selama distribusi di daerah tanpa listrik.</li>
+                    <li><strong>Manajemen Stok *Real-Time*:</strong> Sistem IoT untuk memantau ketersediaan obat di puskesmas, mencegah kekosongan stok (*stock-out*).</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="col-md-6 mb-4">
+            <div class="innovation-card p-4">
+                <div class="icon-box bg-info text-dark shadow-sm">
+                    <i class="bi bi-people-fill"></i>
+                </div>
+                <h4 class="card-title fw-bold">4. Task Shifting & Kesehatan Mental</h4>
+                <p class="text-muted">Optimalisasi sumber daya manusia di tingkat komunitas.</p>
+                <ul class="solution-list list-unstyled">
+                    <li><strong>Kader Kesehatan Terlatih:</strong> Melatih masyarakat awam untuk melakukan deteksi dini hipertensi, diabetes, dan memberikan dukungan kesehatan mental dasar.</li>
+                    <li><strong>Edukasi Berbasis Komunitas:</strong> Kampanye preventif yang disesuaikan dengan budaya lokal untuk melawan stigma HIV/AIDS dan masalah kesehatan mental.</li>
+                    <li><strong>Tele-Konseling:</strong> Akses layanan psikolog daring yang anonim dan terjangkau untuk mengurangi hambatan sosial dalam mencari bantuan.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-lg-8 mx-auto">
+            <div class="card border-0 shadow-sm p-4">
+                <h4 class="card-title text-center mb-3">Estimasi Dampak Penerapan Inovasi</h4>
+                <p class="text-center text-muted small mb-4">Perbandingan Efisiensi Model Tradisional vs. Model Inovatif Terintegrasi</p>
+                <div class="chart-container">
+                    <canvas id="impactChart"></canvas>
+                </div>
+                <div class="mt-3 text-center small text-muted">
+                    *Grafik ini adalah simulasi potensi dampak berdasarkan integrasi teknologi dan efisiensi logistik.
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const ctx = document.getElementById('impactChart').getContext('2d');
+        
+        new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: ['Waktu Tunggu Layanan', 'Biaya Operasional', 'Jangkauan Wilayah', 'Deteksi Dini Penyakit'],
+                datasets: [
+                    {
+                        label: 'Model Tradisional',
+                        data: [80, 90, 40, 30], // Nilai representatif (skala 0-100)
+                        backgroundColor: '#adb5bd',
+                        borderRadius: 5
+                    },
+                    {
+                        label: 'Model Inovatif',
+                        data: [30, 50, 95, 85], // Nilai representatif yang lebih baik
+                        backgroundColor: '#0d6efd',
+                        borderRadius: 5
+                    }
+                ]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: {
+                        position: 'bottom'
+                    },
+                    tooltip: {
+                        mode: 'index',
+                        intersect: false,
+                    }
+                },
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        max: 100,
+                        title: {
+                            display: true,
+                            text: 'Indeks Efektivitas / Efisiensi (%)'
+                        }
+                    }
+                }
+            }
+        });
+    });
+</script>
+
+</main> <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     const icon = "";
     const anchorJS = new window.AnchorJS();
@@ -622,21 +812,5 @@ ul.task-list li input[type="checkbox"] {
     }
   });
   </script>
-<nav class="page-navigation">
-  <div class="nav-page nav-page-previous">
-      <a href="../My_Opinions/index.html" class="pagination-link" aria-label="UAS-3 My Opinions">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">UAS-3 My Opinions</span></span>
-      </a>          
-  </div>
-  <div class="nav-page nav-page-next">
-      <a href="../My_Knowledge/index.html" class="pagination-link" aria-label="UAS-4 My Knowledge">
-        <span class="nav-page-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">UAS-4 My Knowledge</span></span> <i class="bi bi-arrow-right-short"></i>
-      </a>
-  </div>
-</nav>
-</div> <!-- /content -->
-
-
-
-
-</body></html>
+</div> </body>
+</html>
