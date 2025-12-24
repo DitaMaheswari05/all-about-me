@@ -71,6 +71,7 @@
     .card-type-critical::before { background: var(--accent-color); }
     .card-type-warning::before { background: #f39c12; }
     .card-type-info::before { background: #3498db; }
+    .card-type-peer::before { background: #9b59b6; } /* Warna ungu untuk Peer Review */
 
     .metric-box {
         text-align: center;
@@ -133,6 +134,18 @@
         position: relative;
         height: 300px;
         width: 100%;
+    }
+    
+    /* Tombol kustom untuk Peer Review */
+    .btn-peer {
+        background-color: #9b59b6;
+        color: white;
+        border: none;
+        transition: background-color 0.3s;
+    }
+    .btn-peer:hover {
+        background-color: #8e44ad;
+        color: white;
     }
   </style>
 
@@ -446,48 +459,72 @@
   <div class="row mt-4">
     <div class="col-lg-8 mx-auto">
       <div class="report-card mt-3">
-        <h5 class="fw-bold">Evaluasi Draf Opini (Rubrik Opini)</h5>
-        <p class="small text-muted">Penilaian dilakukan untuk draf opini "Ketidakadilan yang Mematikan" berdasarkan rubrik: Compelling, Informative, Persuasive, Engaging.</p>
+        <h5 class="fw-bold">Penilaian Modul Masterpiece (Skala 1.0 - 5.0)</h5>
+        <p class="small text-muted">Nilai berikut merepresentasikan evaluasi professional terhadap konten dan penyajian setiap modul: My Concepts, My Opinions, My Innovations, My Knowledge.</p>
 
-        <div class="table-responsive">
-        <table class="table mt-3">
-          <thead>
-            <tr>
-              <th>Kriteria</th>
-              <th class="text-center">Skor (1-5)</th>
-              <th>Catatan Singkat</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>Compelling (Daya Tarik)</td>
-              <td class="text-center"><span class="badge bg-primary">4</span></td>
-              <td>Pembukaan kuat; bisa diperkaya dengan kisah personal spesifik.</td>
-            </tr>
-            <tr>
-              <td>Informative (Informatif)</td>
-              <td class="text-center"><span class="badge bg-success">5</span></td>
-              <td>Data relevan dan mendalam (4.5 miliar, referensi WHO/Lancet).</td>
-            </tr>
-            <tr>
-              <td>Persuasive (Persuasif)</td>
-              <td class="text-center"><span class="badge bg-primary">4</span></td>
-              <td>Argumen jelas; solusi bisa dijabarkan lebih operasional untuk penguatan.</td>
-            </tr>
-            <tr>
-              <td>Engaging (Keterlibatan)</td>
-              <td class="text-center"><span class="badge bg-success">5</span></td>
-              <td>Bahasa menggugah; memadukan emosional dan rasional secara efektif.</td>
-            </tr>
-          </tbody>
-        </table>
+        <div class="row">
+          <div class="col-md-7">
+            <div class="table-responsive">
+              <table class="table mt-3">
+                <thead>
+                  <tr>
+                    <th>Modul</th>
+                    <th class="text-center">Skor (1.0 - 5.0)</th>
+                    <th class="text-muted">Komentar Singkat</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>My Concepts</td>
+                    <td class="text-center"><span class="badge bg-primary">5.0</span></td>
+                    <td>Konsep kuat; analogi mesin abstrak jelas dan aplikatif.</td>
+                  </tr>
+                  <tr>
+                    <td>My Opinions</td>
+                    <td class="text-center"><span class="badge bg-primary">4.5</span></td>
+                    <td>Opini menggugah; butuh 1-2 kisah personal untuk menambah daya tarik.</td>
+                  </tr>
+                  <tr>
+                    <td>My Innovations</td>
+                    <td class="text-center"><span class="badge bg-success">4.7</span></td>
+                    <td>Solusi pragmatis dan terstruktur; estimasi dampak perlu data lebih detail untuk kuantifikasi.</td>
+                  </tr>
+                  <tr>
+                    <td>My Knowledge</td>
+                    <td class="text-center"><span class="badge bg-success">4.6</span></td>
+                    <td>Data relevan dan referensi kuat; visualisasi dapat diperkaya lagi.</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="mt-2">
+              <strong>Rata-rata:</strong> <span id="avgScore" class="fw-bold">4.5</span>
+              <p class="small text-muted mb-0">Skor rata-rata dihitung otomatis pada saat halaman dimuat.</p>
+            </div>
+          </div>
+          <div class="col-md-5">
+            <div class="chart-container">
+              <canvas id="moduleScoresChart"></canvas>
+            </div>
+            <p class="small text-muted mt-2">Visualisasi skor per modul (skala 1.0 - 5.0).</p>
+          </div>
         </div>
 
-        <!-- <div class="mt-3">
-          <h6 class="fw-bold">Kesimpulan Singkat dari Review</h6>
-          <p class="small text-muted mb-0">Draf opini ini efektif, menggugah, dan berbasis bukti sehingga sangat layak dimasukkan ke dalam Masterpiece. Rekomendasi: tambahkan satu atau dua kisah personal konkret dan perluas bagian solusi agar pembaca memiliki langkah aksi yang jelas.</p>
-        </div> -->
       </div>
+    </div>
+  </div>
+
+  <div class="row mt-4 mb-5">
+    <div class="col-lg-8 mx-auto">
+        <div class="report-card card-type-peer text-center">
+            <h4 class="fw-bold mb-3"><i class="bi bi-people-fill me-2"></i>Peer to Peer Review</h4>
+            <p class="text-muted mb-4">
+                Akses spreadsheet berikut untuk melihat Peer Assessment.
+            </p>
+            <a href="https://docs.google.com/spreadsheets/d/1Dt6TluM7KDh6VDHf2d-pY_psKdwppNkZ/edit?usp=sharing&ouid=106046816304794987565&rtpof=true&sd=true" class="btn btn-peer btn-lg px-5 rounded-pill shadow-sm fw-bold text-decoration-none">
+                <i class="bi bi-file-earmark-spreadsheet me-2"></i>Buka Spreadsheet Penilaian
+            </a>
+        </div>
     </div>
   </div>
 
@@ -548,6 +585,48 @@
             }
         });
     });
+</script>
+
+<script>
+  // Module scores chart + average calculator
+  document.addEventListener('DOMContentLoaded', function() {
+    const modules = ['My Concepts','My Opinions','My Innovations','My Knowledge'];
+    const scores = [5.0, 4.5, 4.7, 4.6]; // match table values
+
+    // compute average
+    const avg = (scores.reduce((a,b)=>a+b,0)/scores.length).toFixed(2);
+    const avgEl = document.getElementById('avgScore');
+    if (avgEl) avgEl.innerText = avg;
+
+    const ctx2 = document.getElementById('moduleScoresChart').getContext('2d');
+    new Chart(ctx2, {
+      type: 'bar',
+      data: {
+        labels: modules,
+        datasets: [{
+          label: 'Skor Modul (1.0 - 5.0)',
+          data: scores,
+          backgroundColor: ['#0d6efd','#6f42c1','#198754','#20c997'],
+          borderRadius: 6
+        }]
+      },
+      options: {
+        indexAxis: 'y',
+        responsive: true,
+        maintainAspectRatio: false,
+        scales: {
+          x: {
+            min: 0,
+            max: 5,
+            ticks: { stepSize: 0.5 }
+          }
+        },
+        plugins: {
+          legend: { display: false }
+        }
+      }
+    });
+  });
 </script>
 
 <script id="quarto-html-after-body" type="application/javascript">
